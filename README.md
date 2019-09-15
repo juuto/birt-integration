@@ -1,5 +1,5 @@
 # bit-integration
-Wicket java application which allows to generate reports designed with Birt Report Designer.\
+Wicket java application which allows to generate reports designed with Birt Report Designer.
 
 ## Requirements to run application
 Maven\

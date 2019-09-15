@@ -27,6 +27,7 @@ public class WicketApplication extends WebApplication
 	public void init()
 	{
 		super.init();
+		getDebugSettings().setAjaxDebugModeEnabled(false);
 
 		// add your configuration here
 	}

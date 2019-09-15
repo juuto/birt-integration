@@ -30,9 +30,6 @@ public class ReportRenderer {
             final IRunAndRenderTask task = ENGINE.createRunAndRenderTask(design);
             task.getAppContext().put(EngineConstants.APPCONTEXT_CLASSLOADER_KEY, ReportRenderer.class.getClassLoader());
 
-//            IGetParameterDefinitionTask parameters = ENGINE.createGetParameterDefinitionTask(design);
-//            parameters.setValue("paramSourceDir", "C:/tmp/");
-
             ReportDesignHandle report = (ReportDesignHandle) design.getDesignHandle();
             SlotHandle dataSources = report.getDataSources();
             SlotIterator slotIterator = (SlotIterator) dataSources.iterator();
@@ -56,7 +53,6 @@ public class ReportRenderer {
             options.setOutputFileName(fileName);
 
             task.setRenderOption(options);
-//            task.setParameterValues(parameters.getParameterValues());
 
             task.run();
 
