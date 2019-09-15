@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<meta charset="utf-8" />
+		<title>Generate Reports</title>
+		<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet" />
+	</head>
+	<body>
+		<div id="hd">
+		</div>
+		<div class="bd">
+			<table>
+				<tr>
+					<td>
+						<div class="explanation">
+						<h1>Generate Report</h1>
+						<form wicket:id="form">
+							<table>
+								<tbody>
+									<tr>
+										<td><wicket:message key="reportName"/></td>
+										<td><select class="input-medium" wicket:id="reportTemplate"/></td>
+									</tr>
+									<tr>
+										<td><wicket:message key="format"/></td>
+										<td><select class="input-medium" wicket:id="format"/></td>
+									</tr>
+									<tr>
+										<td><button class="btn-primary" type="generate" wicket:id="generate"><wicket:message key="generate"/></button></td>
+										<td><div class="hide loader"></div></td>
+									</tr>
+								</tbody>
+							</table>
+							<div wicket:id="feedback"/>
+						</form>
+						</div>
+					</td>
+					<td class="menu">
+						<div wicket:id="menu"/>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="ft">
+		</div>
+	</body>
+</html>

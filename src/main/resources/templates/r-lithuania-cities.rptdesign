@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.7.0.v201706222054</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.excel" name="lithuania-cities" id="7">
+            <property name="URI">C:\birt\workspace\lithuania-cities.xlsx</property>
+            <property name="INCLCOLUMNNAME">yes</property>
+            <property name="INCLTYPELINE">yes</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.excel.dataSet" name="reportData" id="1181">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">City</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">City</text-property>
+                    <text-property name="heading">City</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Population (2018)</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Population (2018)</text-property>
+                    <text-property name="heading">Population (2018)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">County</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">County</text-property>
+                    <text-property name="heading">County</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Municipality</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Municipality</text-property>
+                    <text-property name="heading">Municipality</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">City</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Population (2018)</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">County</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Municipality</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">lithuania-cities</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">City</property>
+                    <property name="nativeName">City</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Population (2018)</property>
+                    <property name="nativeName">Population (2018)</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">County</property>
+                    <property name="nativeName">County</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Municipality</property>
+                    <property name="nativeName">Municipality</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "City", "Population (2018)", "County", "Municipality" from "/C:/birt/workspace/lithuania-cities.xlsx" : {"City","City",STRING;"Population (2018)","Population (2018)",STRING;"County","County",STRING;"Municipality","Municipality",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>City</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>City</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>City</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Population (2018)</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Population (2018)</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Population (2018)</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>County</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>County</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>County</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Municipality</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Municipality</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Municipality</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <property name="WORKSHEETS">Sheet1</property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <auto-text id="1179">
+                    <property name="fontFamily">"Arial"</property>
+                    <property name="fontSize">11pt</property>
+                    <property name="textAlign">right</property>
+                    <property name="type">page-number</property>
+                </auto-text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="9">
+            <property name="dataSet">reportData</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">City</property>
+                    <text-property name="displayName">City</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["City"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Population (2018)</property>
+                    <text-property name="displayName">Population (2018)</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Population (2018)"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">County</property>
+                    <text-property name="displayName">County</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["County"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Municipality</property>
+                    <text-property name="displayName">Municipality</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Municipality"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="25"/>
+            <column id="26"/>
+            <column id="27"/>
+            <column id="28"/>
+            <header>
+                <row id="42">
+                    <property name="verticalAlign">middle</property>
+                    <property name="height">0.4in</property>
+                    <cell id="43">
+                        <property name="colSpan">4</property>
+                        <property name="rowSpan">1</property>
+                        <property name="fontFamily">"Arial"</property>
+                        <label id="48">
+                            <property name="fontSize">16pt</property>
+                            <text-property name="text">Lithuanian Cities and Their Population in 2018</text-property>
+                        </label>
+                    </cell>
+                </row>
+                <row id="37">
+                    <property name="verticalAlign">middle</property>
+                    <property name="height">0.4in</property>
+                    <cell id="38">
+                        <property name="fontFamily">"Arial"</property>
+                        <text id="3">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                        </text>
+                    </cell>
+                    <cell id="39">
+                        <property name="fontFamily">"Arial"</property>
+                    </cell>
+                    <cell id="40">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontWeight">normal</property>
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="41">
+                        <property name="fontFamily">"Arial"</property>
+                    </cell>
+                </row>
+                <row id="10">
+                    <property name="backgroundColor">#E4E4E4</property>
+                    <property name="verticalAlign">middle</property>
+                    <property name="height">0.4in</property>
+                    <cell id="11">
+                        <property name="fontFamily">"Arial"</property>
+                        <label id="29">
+                            <property name="textAlign">left</property>
+                            <text-property name="text">City</text-property>
+                        </label>
+                    </cell>
+                    <cell id="12">
+                        <property name="fontFamily">"Arial"</property>
+                        <label id="30">
+                            <property name="textAlign">center</property>
+                            <text-property name="text">Population (2018)</text-property>
+                        </label>
+                    </cell>
+                    <cell id="13">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontWeight">normal</property>
+                        <property name="textAlign">left</property>
+                        <label id="31">
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">County</text-property>
+                        </label>
+                    </cell>
+                    <cell id="14">
+                        <property name="fontFamily">"Arial"</property>
+                        <label id="32">
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Municipality</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="15">
+                    <property name="verticalAlign">middle</property>
+                    <property name="height">0.4in</property>
+                    <cell id="16">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="borderBottomColor">#A6A6A6</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <data id="1182">
+                            <property name="resultSetColumn">City</property>
+                        </data>
+                    </cell>
+                    <cell id="17">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="borderBottomColor">#A6A6A6</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <data id="1184">
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">Population (2018)</property>
+                        </data>
+                    </cell>
+                    <cell id="18">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="borderBottomColor">#A6A6A6</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <data id="1183">
+                            <property name="resultSetColumn">County</property>
+                        </data>
+                    </cell>
+                    <cell id="19">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="borderBottomColor">#A6A6A6</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <data id="1185">
+                            <property name="resultSetColumn">Municipality</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="20">
+                    <property name="verticalAlign">middle</property>
+                    <property name="height">0.4in</property>
+                    <cell id="21">
+                        <property name="fontFamily">"Arial"</property>
+                    </cell>
+                    <cell id="22">
+                        <property name="fontFamily">"Arial"</property>
+                    </cell>
+                    <cell id="23">
+                        <property name="fontFamily">"Arial"</property>
+                    </cell>
+                    <cell id="24">
+                        <property name="fontFamily">"Arial"</property>
+                    </cell>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

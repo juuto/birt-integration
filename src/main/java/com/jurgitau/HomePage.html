@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<meta charset="utf-8" />
+		<title>Birt Report Integration Application</title>
+		<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet" />
+	</head>
+	<body>
+		<div id="hd">
+		</div>
+		<div class="bd">
+			<table>
+				<tr>
+					<td>
+						<div class="explanation">
+							<h1>Birt Reports Integration Application</h1>
+							<p>This application generates reports using report templates designed with Birt Report Designer.</p>
+							<p>There are two ways to generate reports using Birt templates:</p>
+							<ul>
+								<li>Deploying the BIRT viewer onto your own application server.</li>
+								<li>Using Report Engine.</li>
+							</ul>
+							<p>For this application Report Engine implementation was used.</p>
+							<p>Application built with Java and Apache Wicket.</p>
+							<p>Data source: Excel.</p>
+							<p>Generated report saved in C:/tmp directory.</p>
+						</div>
+					</td>
+					<td class="menu">
+						<div wicket:id="menu"/>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="ft">
+		</div>
+	</body>
+</html>
