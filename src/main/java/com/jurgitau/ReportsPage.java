@@ -1,5 +1,6 @@
 package com.jurgitau;
 
+import com.jurgitau.download.DownloadReportAjaxSubmitLink;
 import com.jurgitau.exceptions.FieldRequiredException;
 import com.jurgitau.reports.ReportFormat;
 import com.jurgitau.reports.ReportParameters;
@@ -84,15 +85,36 @@ public class ReportsPage extends WebPage {
                             feedback.warn(e.getMessage());
                             target.add(feedback);
                         } catch(Exception e) {
+                            feedback.add(new AttributeModifier("class", "error"));
+                            feedback.warn("Did not succeed to generate the report");
+                            target.add(feedback);
+                        }
+                    }
+                },
 
+                new DownloadReportAjaxSubmitLink("download") {
+                    @Override
+                    public void onSubmit(AjaxRequestTarget target) {
+                        ReportParameters backer = model.getObject();
+                        try {
+                            validateInput(backer);
+
+                            setTemplate(backer.reportTemplate);
+                            setFormat(backer.format);
+                            super.onSubmit(target);
+
+                        } catch(FieldRequiredException e) {
+                            feedback.add(new AttributeModifier("class", "error"));
+                            feedback.warn(e.getMessage());
+                            target.add(feedback);
+                        } catch(Exception e) {
                             feedback.add(new AttributeModifier("class", "error"));
                             feedback.warn("Did not succeed to generate the report");
                             target.add(feedback);
                         }
                     }
                 }
-            )
-        );
+        ));
 
         add(new NavigationPanel("menu"));
     }

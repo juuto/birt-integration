@@ -87,8 +87,7 @@ td.menu {
     margin-left: 10px;
 }
 
-.btn-primary {
-    background-color: #6493D2;
+.btn {
     border: none;
     color: white;
     padding: 10px 32px;
@@ -99,7 +98,15 @@ td.menu {
     margin-top: 40px;
 }
 
-.btn-primary:hover {
+.btn-primary {
+    background-color: #4376BC;
+}
+
+.btn-secondary {
+    background-color: #265CA6;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
     background-color: #092E67;
 }
 
