@@ -27,9 +27,9 @@ public class ReportsPageTest {
             .setValue("reportTemplate", "0")
             .setValue("format", "0");
 
-        tester.executeAjaxEvent("form:generate", "click");
+        tester.executeAjaxEvent("form:download", "click");
 
-        tester.assertFeedback("form:feedback", "Report successfully saved in C:/tmp/r-lithuania-cities.pdf");
+        tester.assertNoErrorMessage();
     }
 
 }

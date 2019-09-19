@@ -64,34 +64,6 @@ public class ReportsPage extends WebPage {
                     .setOutputMarkupId(true)
                     .setOutputMarkupPlaceholderTag(true),
 
-                new AjaxSubmitLink("generate") {
-                    @Override
-                    public void onSubmit(AjaxRequestTarget target) {
-                        ReportParameters backer = model.getObject();
-                        try {
-                            validateInput(backer);
-
-                            final ReportRenderer renderer = new ReportRenderer();
-                            String result = renderer.generateReport(
-                                backer.reportTemplate.getTemplateId(),
-                                backer.format.toString()
-                            );
-
-                            feedback.add(new AttributeModifier("class", "success"));
-                            feedback.success("Report successfully saved in " + result);
-                            target.add(feedback);
-                        } catch(FieldRequiredException e) {
-                            feedback.add(new AttributeModifier("class", "error"));
-                            feedback.warn(e.getMessage());
-                            target.add(feedback);
-                        } catch(Exception e) {
-                            feedback.add(new AttributeModifier("class", "error"));
-                            feedback.warn("Did not succeed to generate the report");
-                            target.add(feedback);
-                        }
-                    }
-                },
-
                 new DownloadReportAjaxSubmitLink("download") {
                     @Override
                     public void onSubmit(AjaxRequestTarget target) {

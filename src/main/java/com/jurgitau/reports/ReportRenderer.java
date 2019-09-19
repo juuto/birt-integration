@@ -23,34 +23,6 @@ public class ReportRenderer {
     private static final IReportEngine ENGINE = new ReportEngine(new EngineConfig());
     private final URL resourceLocation = getClass().getResource("/templates/");
 
-    public String generateReport(String templateId, String format) {
-        try {
-            URL url = getClass().getResource("/templates/" + templateId + ".rptdesign");
-
-            IReportRunnable design = ENGINE.openReportDesign(url.getPath());
-
-            final IRunAndRenderTask task = ENGINE.createRunAndRenderTask(design);
-            task.getAppContext().put(EngineConstants.APPCONTEXT_CLASSLOADER_KEY, ReportRenderer.class.getClassLoader());
-
-            updateDataSources(design);
-
-            final IRenderOption options = new RenderOption();
-            options.setOutputFormat(format);
-            String fileName = "C:/tmp/" + templateId + "." + options.getOutputFormat();
-            options.setOutputFileName(fileName);
-
-            task.setRenderOption(options);
-            task.run();
-            task.close();
-
-            return fileName;
-
-        } catch(Exception ex) {
-            ex.printStackTrace();
-            return ex.getMessage();
-        }
-    }
-
     public byte[] downloadReport(String templateId, String format) throws ReportEngineException {
         URL url = getClass().getResource("/templates/" + templateId + ".rptdesign");
 
